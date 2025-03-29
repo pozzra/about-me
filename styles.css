@@ -1,0 +1,342 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Light Mode */
+  body.light-mode {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+  }
+  
+  /* Icon Styling */
+  #theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: inherit; /* Inherit text color from body */
+    margin-left: 10px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    margin-right: -20px;
+  }
+  
+  .profile-card {
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 400px; /* Ensure it doesn't exceed 400px on larger screens */
+    height: auto;
+    background-color: #ff00ff; /* Pink-purple gradient */
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#fc00fc),
+      to(#8686ff)
+    );
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Prevent content from overflowing */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+  }
+  
+  .time-set {
+    font-size: 14px;
+    border: 1px solid #1808fd;
+    padding: 5px;
+    border-radius: 5px;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#089b40),
+      to(#0000ff)
+    );
+  }
+  
+  .language-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-btn {
+    background-color: #ff00ff;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#089b40),
+      to(#0000ff)
+    );
+    color: #fff;
+    border: 1px solid rgb(99, 6, 63);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 100px;
+  }
+  
+  .dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #333;
+  }
+  
+  .sleep-icon {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  
+  .arrow-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .social-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .social-btn {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#eb5b7b),
+      to(#4a4afd)
+    );
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-btn i {
+    margin-right: 5px;
+  }
+  
+  .sleep-icon {
+    font-size: 20px;
+    background-color: none;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  /* Smooth transition for text */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  h2 {
+    font-size: 24px;
+    background: linear-gradient(to right, #02ff6b, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+    display: inline-block; /* Ensures the text is treated as an inline element */
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  
+  .social-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .social-btn {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#eb5b7b),
+      to(#4a4afd)
+    );
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .social-btn:hover {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#ff69b4),
+      to(#4a4afd)
+    );
+  }
+  
+  .social-btn i {
+    font-size: 18px; /* Adjust icon size */
+    margin-right: 8px; /* Add spacing between icon and text */
+    color: #fff; /* Ensure icons are white */
+  }
+  /* Import Bootstrap Icons */
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+  
+  /* Responsive Design for Mobile Screens */
+  @media (max-width: 768px) {
+    .profile-card {
+      width: 80%; /* Make the card take up more space on smaller screens */
+      padding: 15px; /* Reduce padding */
+    }
+  
+    header {
+        display: flex;
+      flex-direction: row; /* Stack header items vertically */
+      align-items: center; /* Align items to the start */
+      gap: 10px; /* Add spacing between items */
+    }
+  
+    .time-set {
+      font-size: 12px; /* Reduce font size */
+      padding: 3px; /* Reduce padding */
+    }
+  
+    .dropdown-btn {
+      font-size: 12px; /* Reduce font size */
+      padding: 3px 8px; /* Reduce padding */
+    }
+  
+    .profile-picture {
+      width: 120px; /* Reduce profile picture size */
+      height: 120px;
+    }
+  
+    h2 {
+      font-size: 20px; /* Reduce font size */
+    }
+  
+    .social-buttons {
+      grid-template-columns: 1fr; /* Stack social buttons vertically */
+      gap: 5px; /* Reduce spacing */
+    }
+  
+    .social-btn {
+      font-size: 12px; /* Reduce font size */
+      padding: 8px 15px; /* Reduce padding */
+      margin-top: 5px;
+
+    }
+  }
+  
+  /* Extra Small Screens (e.g., Phones) */
+  @media (max-width: 480px) {
+    .profile-card {
+      width: 80%; /* Take up full width on very small screens */
+      padding: 10px; /* Further reduce padding */
+    }
+  
+    header {
+        display: flex;
+    }
+  
+    .time-set {
+      font-size: 10px; /* Further reduce font size */
+      padding: 2px; /* Further reduce padding */
+    }
+  
+    .dropdown-btn {
+      font-size: 10px; /* Further reduce font size */
+      padding: 2px 5px; /* Further reduce padding */
+      
+    }
+  
+    .profile-picture {
+      width: 100px; /* Further reduce profile picture size */
+      height: 100px;
+    }
+  
+    h2 {
+      font-size: 18px; /* Further reduce font size */
+    }
+  
+    .social-buttons {
+      gap: 3px; /* Further reduce spacing */
+    }
+  
+    .social-btn {
+      font-size: 10px; /* Further reduce font size */
+      padding: 5px 10px; /* Further reduce padding */
+      margin-top: 5px;
+    }
+  }
