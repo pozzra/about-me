@@ -202,7 +202,9 @@
     -webkit-text-fill-color: transparent;
     margin-top: 20px;
     display: inline-block; /* Ensures the text is treated as an inline element */
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;    
+    border-right: 2px solid skyblue; /* Add right border */
+    padding: 0 1.5px; /* Add padding to the text */
   }
   
   
