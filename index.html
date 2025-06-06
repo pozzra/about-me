@@ -113,17 +113,5 @@
 
     <!-- Language switch script -->
     <script src="script.js"></script>
-    
-    <script>
-      document.getElementById("language-selector").addEventListener("change", function () {
-        const selectedLang = this.value;
-        const elements = document.querySelectorAll("[data-en]");
-        elements.forEach((el) => {
-          if (el.dataset[selectedLang]) {
-            el.textContent = el.dataset[selectedLang];
-          }
-        });
-      });
-    </script>
   </body>
 </html>
